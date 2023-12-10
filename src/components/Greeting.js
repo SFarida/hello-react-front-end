@@ -5,15 +5,14 @@ import { fetchGreeting } from '../greetingSlice';
 const Greeting = () => {
   const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting.value);
-    console.log("greetings", greeting)
   useEffect(() => {
     dispatch(fetchGreeting());
   }, [dispatch]);
 
   return (
     <div>
-        <h2>Greeting:</h2>
-        <p>{greeting}</p>
+      <h2>Greeting:</h2>
+      <p>{greeting}</p>
     </div>
   );
 };
